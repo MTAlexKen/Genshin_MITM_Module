@@ -1,6 +1,13 @@
 #!name=Genshin Impact Routing Module MitM
 #!desc=A module to use Grasscutter, with MITM handled via Surge, server hosted by Exzork, moudle written by 饾悥饾惃饾惏.
 
+[Rule]
+DOMAIN, log-upload-os.mihoyo.com, REJECT
+DOMAIN, log-upload.mihoyo.com, REJECT
+DOMAIN, log-upload-os.hoyoverse.com, REJECT
+DOMAIN, overseauspider.yuanshen.com, REJECT
+DOMAIN, uspider.yuanshen.com, REJECT
+
 [URL Rewrite]
 # Handle MITM on client-side, discarding mitmdump.
 hk4e-api-os-static.mihoyo.com s6.pikapikpak.tk header
